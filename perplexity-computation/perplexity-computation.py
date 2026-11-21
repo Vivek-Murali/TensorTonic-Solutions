@@ -13,7 +13,5 @@ def perplexity(prob_distributions: list, actual_tokens: list) -> float:
 
     average_log_probability = sum(log_probabilities) / len(log_probabilities)
 
-    perplexity_value = np.exp(-average_log_probability)
-
-    return round(perplexity_value, 4)
+    return round(np.exp(-average_log_probability),4)
         
